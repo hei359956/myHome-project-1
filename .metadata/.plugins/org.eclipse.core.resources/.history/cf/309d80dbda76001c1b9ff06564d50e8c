@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration | user editor</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>User Registration | Sign Up</h1>
+		</div>
+		
+		<form th:action="@{/process_register}" method="POST" style="max-width:600px; margin:0 auto"
+		th:object="${user}"
+		>
+		<div class"m-3">
+			<div class="form-group row">
+			<label class="col-form-label col-12">Email</label>
+			<div class="col-12">
+				<input type="email"class="form-control" th:field="*{email}" required/>
+			</div>
+		</div>
+				
+			<div class="form-group row">
+			<label class="col-form-label col-12">Password</label>
+			<div class="col-12">
+				<input type="password"class="form-control" th:field="*{password}" required/>
+			</div>
+			</div>
+				
+			<div class="form-group row">
+			<label class="col-form-label col-12">First Name</label>
+			<div class="col-12">
+				<input type="text"class="form-control" th:field="*{firstName}" required/>
+			</div>
+			</div>
+				
+			<div class="form-group row">
+			<label class="col-form-label col-12">Last Name</label>
+			<div class="col-12">
+				<input type="text"class="form-control" th:field="*{lastName}" required/>
+			</div>	
+			</div>
+				
+			<div class="form-group row">
+			<label class="col-form-label col-12">Phone</label>
+			<div class="col-12">
+				<input type="number"class="form-control" th:field="*{phone}" required/>
+			</div>
+			</div>
+				
+			<div class="form-group row">
+			<label class="col-form-label col-12">Country</label>
+			<div class="col-12">
+				<input type="Text"class="form-control" th:field="*{country}" required/>					
+			</div>
+			</div>
+			
+			<div>
+				<button type="submit" class="btn btn-primary">Sign Up</button>
+			</div>
+		
+		</form>
+		<div>
+			
+		</div>
+	</div>
+</body>
+</html>

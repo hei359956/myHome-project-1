@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration | user editor</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>User Registration | Sign Up</h1>
+		</div>
+		
+		<form th:action="@{/process_register}" method="POST"
+		th:object="${user}"
+		>
+		<div>
+			<div class="form-group row">
+			<label>email</label>
+			<input type="email"/>
+			
+		</div>"
+		</form>
+		<div>
+			
+		</div>
+	</div>
+</body>
+</html>
